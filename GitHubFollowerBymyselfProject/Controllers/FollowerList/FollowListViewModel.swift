@@ -37,9 +37,11 @@ final class FollowerListViewModel: BaseViewModel {
     private let favoriteManager: LocalServiceProtocol
     
     //MARK: - Init
-    init(userName: String,
-         networkService: NetworkServiceProtocol,
-         favoriteManager: LocalServiceProtocol) {
+    init(
+        userName: String,
+        networkService: NetworkServiceProtocol,
+        favoriteManager: LocalServiceProtocol
+    ) {
         self.username        = userName
         self.networkService  = networkService
         self.favoriteManager = favoriteManager
@@ -60,8 +62,10 @@ extension FollowerListViewModel {
         guard userName != "" else { return }
         state = .loading
         networkService.fetchFollowerList(of: userName)
-            .sink(receiveCompletion: fetchCompletion,
-                  receiveValue: receiveValue)
+            .sink(
+                receiveCompletion: fetchCompletion,
+                receiveValue: receiveValue
+            )
             .store(in: &cancellables)
     }
     
