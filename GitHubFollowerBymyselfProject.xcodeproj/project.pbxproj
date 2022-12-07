@@ -255,8 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				359173E327EDB3E6003AE656 /* FavoriteBuilder.swift */,
-				350F4FA426833CBA0055BCDD /* FavoriteViewController.swift */,
 				351BD01C27D7B18000C50F13 /* FavoriteViewModel.swift */,
+				350F4FA426833CBA0055BCDD /* FavoriteViewController.swift */,
 				351BD01E27D7B18A00C50F13 /* FavoriteView.swift */,
 			);
 			path = Favorite;
@@ -266,8 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				359173E527EDCDB4003AE656 /* FollowerListBuilder.swift */,
-				35253BAC27D79A4A007D0D7F /* FollowerListViewController.swift */,
 				351BD01827D7B06A00C50F13 /* FollowListViewModel.swift */,
+				35253BAC27D79A4A007D0D7F /* FollowerListViewController.swift */,
 				351BD01A27D7B07100C50F13 /* FollowListView.swift */,
 			);
 			path = FollowerList;
@@ -277,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				359173E727EDCDC0003AE656 /* FollowerDetailBuilder.swift */,
-				35830353268AA30900C83D22 /* FollowerDetailViewController.swift */,
 				351BD02027D8BA4900C50F13 /* FollowerDetailViewModel.swift */,
+				35830353268AA30900C83D22 /* FollowerDetailViewController.swift */,
 				351BD02227D8BA5700C50F13 /* FollowerDetailView.swift */,
 			);
 			name = FollowDetail;
@@ -420,8 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				35BAB6C727EC5449001D3A71 /* SearchBuilder.swift */,
-				35AB142E27D7922D00DDBEE0 /* SearchViewController.swift */,
 				351BD01427D7A26900C50F13 /* SearchViewModel.swift */,
+				35AB142E27D7922D00DDBEE0 /* SearchViewController.swift */,
 				351BD01227D7A25000C50F13 /* SearchView.swift */,
 			);
 			path = Search;
