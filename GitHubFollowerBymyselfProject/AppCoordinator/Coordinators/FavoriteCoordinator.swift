@@ -39,7 +39,11 @@ final class FavoriteCoordinator: Coordinator {
     }
     
     func showFollowerDetail(of follower: Follower) {
-        let coordinator = FollowerDetailCoordinaotr(navigationController: navigationController, container: container, follower: follower)
+        let coordinator = FollowerDetailCoordinaotr(
+            navigationController: navigationController,
+            container: container,
+            follower: follower
+        )
         coordinator.didFinishPublisher
             .sink { [weak self] in
                 self?.removeChild(coordinator: coordinator)
