@@ -18,9 +18,11 @@ final class AppCoordinator: Coordinator {
     private let window: UIWindow
     private let container: AppContainer
     
-    init(window: UIWindow,
-         navigationController: UINavigationController = UINavigationController(),
-         container: AppContainer){
+    init(
+        window: UIWindow,
+        navigationController: UINavigationController = UINavigationController(),
+        container: AppContainer
+    ){
         self.window = window
         self.navigationController = navigationController
         self.container = container
@@ -34,7 +36,10 @@ final class AppCoordinator: Coordinator {
     }
     
     private func mainFlow() {
-        let mainCoordinator = MainTabBarCoordinator(navigationController: navigationController, container: container)
+        let mainCoordinator = MainTabBarCoordinator(
+            navigationController: navigationController,
+            container: container
+        )
         mainCoordinator.didFinishPublisher
             .sink {[weak self] in
             self?.removeChild(coordinator: mainCoordinator)

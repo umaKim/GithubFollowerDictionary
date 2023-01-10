@@ -33,9 +33,11 @@ final class MainTabBarCoordinator: Coordinator {
     
     private func setUpSearchCoordinator() {
         let navController = UINavigationController()
-        navController.tabBarItem = .init(title: "Search",
-                                         image: UIImage(systemName: "person"),
-                                         selectedImage: UIImage(systemName: "person.fill"))
+        navController.tabBarItem = .init(
+            title: "Search",
+            image: UIImage(systemName: "person"),
+            selectedImage: UIImage(systemName: "person.fill")
+        )
         let coordinator = SearchCoordinator(navigationController: navController, container: container)
         childCoordinators.append(coordinator)
         coordinator.start()
@@ -43,9 +45,11 @@ final class MainTabBarCoordinator: Coordinator {
     
     private func setUpFavoriteCoordinator() {
         let navController = UINavigationController()
-        navController.tabBarItem = .init(title: "Favorite",
-                                         image: UIImage(systemName: "star"),
-                                         selectedImage: UIImage(systemName: "star.fill"))
+        navController.tabBarItem = .init(
+            title: "Favorite",
+            image: UIImage(systemName: "star"),
+            selectedImage: UIImage(systemName: "star.fill")
+        )
         let coordinator = FavoriteCoordinator(navigationController: navController, container: container)
         childCoordinators.append(coordinator)
         coordinator.start()

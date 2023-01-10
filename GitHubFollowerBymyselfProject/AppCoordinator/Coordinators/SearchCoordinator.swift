@@ -18,8 +18,10 @@ final class SearchCoordinator: Coordinator {
     
     private let container: AppContainer
     
-    init(navigationController: UINavigationController,
-         container: AppContainer) {
+    init(
+        navigationController: UINavigationController,
+        container: AppContainer
+    ) {
         self.navigationController = navigationController
         self.container = container
     }
@@ -38,9 +40,11 @@ final class SearchCoordinator: Coordinator {
     }
     
     private func showFollowerList(of userName: String) {
-        let coordinator = FollowerListCoordinator(navigationController: navigationController,
-                                                  container: container,
-                                                  userName: userName)
+        let coordinator = FollowerListCoordinator(
+            navigationController: navigationController,
+            container: container,
+            userName: userName
+        )
         addChild(coordinator: coordinator)
         coordinator.start()
     }

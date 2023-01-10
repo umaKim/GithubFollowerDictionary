@@ -1022,8 +1022,8 @@
             filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/FavoriteCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "showFollowerDetail(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1044,14 +1044,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "63167223-1754-47AF-AB0D-1F9DBA757650 - 7d5bc65aba58df92"
+                  uuid = "63167223-1754-47AF-AB0D-1F9DBA757650 - 162b3c2e19fd1146"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GitHubFollowerBymyselfProject.FollowerDetailViewModel.gitHubProfileDidTap() -&gt; ()"
                   moduleName = "GitHubFollowerBymyselfProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yokim/Desktop/IOSDevelopment/GitHubFollowerBymyselfProject/GitHubFollowerBymyselfProject/Controllers/FollowerDetail/FollowerDetailViewModel.swift"
+                  urlString = "file:///Users/yokim/Documents/GitHub/GithubFollowerDictionary/GitHubFollowerBymyselfProject/Controllers/FollowerDetail/FollowerDetailViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -1059,14 +1059,14 @@
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "63167223-1754-47AF-AB0D-1F9DBA757650 - 7d5bc65aba58df92"
+                  uuid = "63167223-1754-47AF-AB0D-1F9DBA757650 - 162b3c2e19fd1146"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "GitHubFollowerBymyselfProject.FollowerDetailViewModel.gitHubProfileDidTap() -&gt; ()"
                   moduleName = "GitHubFollowerBymyselfProject"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yokim/Desktop/IOSDevelopment/GitHubFollowerBymyselfProject/GitHubFollowerBymyselfProject/Controllers/FollowerDetail/FollowerDetailViewModel.swift"
+                  urlString = "file:///Users/yokim/Documents/GitHub/GithubFollowerDictionary/GitHubFollowerBymyselfProject/Controllers/FollowerDetail/FollowerDetailViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -1112,7 +1112,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0EABA10C-5FCA-4BD8-A1EB-8F4CC336CFEF"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GitHubFollowerBymyselfProject/Controllers/Search/SearchViewModel.swift"
@@ -1314,6 +1314,134 @@
                   offsetFromSymbolStart = "18">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C634D1C5-831A-461E-AA83-F0F426D1FF8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "start()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C634D1C5-831A-461E-AA83-F0F426D1FF8D - a958982eac156203"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHubFollowerBymyselfProject.SearchCoordinator.start() -&gt; ()"
+                  moduleName = "GitHubFollowerBymyselfProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yokim/Documents/GitHub/GithubFollowerDictionary/GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  uuid = "C634D1C5-831A-461E-AA83-F0F426D1FF8D - c098a3d10ba484ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GitHubFollowerBymyselfProject.SearchTransition) -&gt; () in GitHubFollowerBymyselfProject.SearchCoordinator.start() -&gt; ()"
+                  moduleName = "GitHubFollowerBymyselfProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yokim/Documents/GitHub/GithubFollowerDictionary/GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1E0990D-8A3F-49C5-B58C-6C92DC9FCC5B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/MainTabBarCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setUpSearchCoordinator()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5330C8B7-26F1-4550-AE8D-1123FF3DB0FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "837CFA10-56C3-4F02-9F29-9EF2C593F626"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3C645B7-5CC7-48A4-8838-CC9AA960F0A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/SearchCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9A84B9F-CAA1-4B26-89E3-477CEDDE2AAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/FollowerDetailCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "start()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
