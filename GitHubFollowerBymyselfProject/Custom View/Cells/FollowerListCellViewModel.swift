@@ -20,8 +20,10 @@ class FollowerListCellViewModel {
     private let network: NetworkService
 
     //MARK: - Init
-    init(follower: Follower,
-         network: NetworkService = NetworkService()) {
+    init(
+        follower: Follower,
+        network: NetworkService = NetworkService()
+    ) {
         self.follower = follower
         self.network = network
         
