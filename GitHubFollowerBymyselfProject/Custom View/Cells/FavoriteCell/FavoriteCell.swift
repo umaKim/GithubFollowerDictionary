@@ -28,11 +28,7 @@ final class FavoriteCell: UITableViewCell {
     }
     
     private var setData: Void {
-        viewModel?.imagePublisher
-            .receive(on: RunLoop.main)
-            .compactMap({$0})
-            .assign(to: \.image, on: avatarImageView)
-            .store(in: &cancellables)
+        avatarImageView.downloaded(from: viewModel?.follower.avatar_url ?? "")
         
         viewModel?.$follower
             .receive(on: RunLoop.main)

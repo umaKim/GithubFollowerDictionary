@@ -13,37 +13,6 @@ protocol NetworkServiceProtocol {
     func fetchFollowerDetail(of userName: String) -> AnyPublisher<FollowerDetailInformation, GFError>
 }
 
-final class ProfileImageLoader {
-    static let shared = ProfileImageLoader()
-    
-    private let cache = NSCache<NSString, UIImage>()
-    
-    func loadImage(from urlString: String) -> AnyPublisher<UIImage, GFError> {
-        let cacheKey = NSString(string: urlString)
-
-        if let image = cache.object(forKey: cacheKey) {
-            return Just<UIImage>(image).setFailureType(to: GFError.self).eraseToAnyPublisher()
-        }
-
-        guard let url = URL(string: urlString) else {
-            return Fail(error: .error).eraseToAnyPublisher()
-        }
-
-        return URLSession.shared
-            .dataTaskPublisher(for: url)
-            .mapError({error -> GFError in
-                    .error
-            })
-            .map({$0.data})
-            .compactMap { UIImage(data: $0) ?? UIImage() }
-            .map({ [weak self] in
-                self?.cache.setObject($0, forKey: cacheKey)
-                return $0
-            })
-            .eraseToAnyPublisher()
-    }
-}
-
 final class NetworkService: NetworkServiceProtocol {
     func fetchFollowerList(of userName: String) -> AnyPublisher<[Follower], GFError> {
         return Future { promise in
@@ -95,7 +64,6 @@ final class NetworkService: NetworkServiceProtocol {
                     promise(.failure(.cannotDecode))
                 }
             }.resume()
-            
         }
         .receive(on: RunLoop.main)
         .eraseToAnyPublisher()

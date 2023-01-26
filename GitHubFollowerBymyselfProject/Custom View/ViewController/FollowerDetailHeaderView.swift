@@ -36,15 +36,7 @@ final class FollowerDetailHeaderView: UIView {
     private let network = NetworkService()
     
     func configureContents(of followerDetailInfo: FollowerDetailInformation) {
-        ProfileImageLoader.shared.loadImage(from: followerDetailInfo.avatarUrl)
-            .receive(on: RunLoop.main)
-            .replaceError(with: UIImage())
-            .sink(receiveValue: { image in
-                self.avatarImageView.image = image
-            })
-            .store(in: &cancellables)
-
-        
+        avatarImageView.downloaded(from: followerDetailInfo.avatarUrl)
         usernameLabel.text          = followerDetailInfo.login
         nameLabel.text              = followerDetailInfo.name ?? "N/A"
         locationImageView.image     = UIImage(systemName: "mappin.and.ellipse")

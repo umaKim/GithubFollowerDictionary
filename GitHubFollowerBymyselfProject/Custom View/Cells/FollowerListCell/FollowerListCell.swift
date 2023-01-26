@@ -27,12 +27,15 @@ final class FollowerListCell: UICollectionViewCell {
         configureUI()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        profileImageView.image = nil
+        nameLabel.text = nil
+    }
+    
     private var setData: Void {
-        viewModel?.imagePublisher
-            .receive(on: RunLoop.main)
-            .compactMap({$0})
-            .assign(to: \.image, on: profileImageView)
-            .store(in: &cancellables)
+        profileImageView.downloaded(from: viewModel?.follower.avatar_url ?? "")
         
         viewModel?.$follower
             .receive(on: RunLoop.main)

@@ -15,7 +15,9 @@ final class FavoriteBuiler {
     class func build(container: AppContainer) -> Module<FavoriteTransition, UIViewController> {
         let viewModel = FavoriteViewModel(localService: container.localSaveService)
         let viewController = FavoriteViewController(of: viewModel)
-        return Module(viewController: viewController,
-                      transitionPublisher: viewModel.transitionPublisher)
+        return Module(
+            viewController: viewController,
+            transitionPublisher: viewModel.transitionPublisher
+        )
     }
 }

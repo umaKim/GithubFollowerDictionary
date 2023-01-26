@@ -798,8 +798,8 @@
             filePath = "GitHubFollowerBymyselfProject/Managers/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "fetchFollowerDetail(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -814,8 +814,8 @@
             filePath = "GitHubFollowerBymyselfProject/Managers/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "fetchFollowerDetail(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -830,8 +830,8 @@
             filePath = "GitHubFollowerBymyselfProject/Managers/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "fetchFollowerDetail(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -942,8 +942,8 @@
             filePath = "GitHubFollowerBymyselfProject/Managers/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fetchFollowerList(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -958,8 +958,8 @@
             filePath = "GitHubFollowerBymyselfProject/Managers/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "fetchFollowerList(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1022,8 +1022,8 @@
             filePath = "GitHubFollowerBymyselfProject/AppCoordinator/Coordinators/FavoriteCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "showFollowerDetail(of:)"
             landmarkType = "7">
          </BreakpointContent>

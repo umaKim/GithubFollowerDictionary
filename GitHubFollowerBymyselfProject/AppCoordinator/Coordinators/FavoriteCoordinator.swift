@@ -28,8 +28,7 @@ final class FavoriteCoordinator: Coordinator {
     func start() {
         let module = FavoriteBuiler.build(container: container)
         module.transitionPublisher
-            .sink {[weak self] transition in
-                guard let self = self else { return }
+            .sink { transition in
                 switch transition {
                 case .tap(let follower):
                     self.showFollowerDetail(of: follower)

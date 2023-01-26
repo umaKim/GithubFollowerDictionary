@@ -69,6 +69,7 @@
 		35AB142F27D7922D00DDBEE0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB142E27D7922D00DDBEE0 /* SearchViewController.swift */; };
 		35BAB6C027EB1EA7001D3A71 /* FollowerListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BAB6BF27EB1EA7001D3A71 /* FollowerListCellViewModel.swift */; };
 		35BAB6C827EC5449001D3A71 /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BAB6C727EC5449001D3A71 /* SearchBuilder.swift */; };
+		35CDA9E029828E4A003FC005 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDA9DF29828E4A003FC005 /* UIImageView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		35AB142E27D7922D00DDBEE0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		35BAB6BF27EB1EA7001D3A71 /* FollowerListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListCellViewModel.swift; sourceTree = "<group>"; };
 		35BAB6C727EC5449001D3A71 /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
+		35CDA9DF29828E4A003FC005 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +348,7 @@
 				35830335268415C900C83D22 /* UIViewController+Extension.swift */,
 				351BD01627D7AFDD00C50F13 /* UITextField+Extension.swift */,
 				35A692F427EEE6280047EE3D /* Array+ Extension.swift */,
+				35CDA9DF29828E4A003FC005 /* UIImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				359173E827EDCDC0003AE656 /* FollowerDetailBuilder.swift in Sources */,
 				359173D627ED7D10003AE656 /* MainTabBarBuilder.swift in Sources */,
 				351BD01927D7B06A00C50F13 /* FollowListViewModel.swift in Sources */,
+				35CDA9E029828E4A003FC005 /* UIImageView+Ext.swift in Sources */,
 				359173D927ED7D2F003AE656 /* MainTabBarViewController.swift in Sources */,
 				35A692F827EEE6FE0047EE3D /* Constants.swift in Sources */,
 				350F4FA526833CBA0055BCDD /* FavoriteViewController.swift in Sources */,
