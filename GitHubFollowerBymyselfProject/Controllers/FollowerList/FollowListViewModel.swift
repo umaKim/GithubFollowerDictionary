@@ -86,7 +86,9 @@ extension FollowerListViewModel {
     func addToFavorite() {
         state = .loading
 
-        let fetchCompletionValue: (Subscribers.Completion<GFError>) -> Void = {[unowned self] completion in
+        let fetchCompletionValue: (
+            Subscribers.Completion<GFError>
+        ) -> Void = {[unowned self] completion in
             switch completion {
             case .finished:
                 self.state = .finishedLoading
@@ -102,8 +104,10 @@ extension FollowerListViewModel {
         }
 
         networkService.fetchFollowerDetail(of: username)
-            .sink(receiveCompletion: fetchCompletionValue,
-                  receiveValue: returnValue)
+            .sink(
+                receiveCompletion: fetchCompletionValue,
+                receiveValue: returnValue
+            )
             .store(in: &cancellables)
     }
 }
