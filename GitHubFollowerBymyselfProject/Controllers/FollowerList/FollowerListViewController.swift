@@ -24,6 +24,10 @@ final class FollowerListViewController: BaseViewController<FollowerListViewModel
         view = contentView
     }
     
+    deinit {
+        UIImageView.removeCache()
+    }
+    
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
