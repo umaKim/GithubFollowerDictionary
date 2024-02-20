@@ -94,8 +94,11 @@ extension FollowerDetailViewModel {
         
         self.networkService
             .fetchFollowerDetail(of: followerBasicInfo.login)
-            .sink(receiveCompletion: fetchCompletionValue,
-                  receiveValue: returnValue)
+            .sink(receiveCompletion: {[weak self] in
+                self?.fetchCompletionValue(completion: $0)
+            }, receiveValue: {[weak self] in
+                self?.returnValue(followerDetailInfo: $0)
+            })
             .store(in: &self.cancellable)
     }
 }

@@ -40,6 +40,9 @@ final class FollowerListCoordinator: Coordinator {
                 switch transition {
                 case .tap(follower: let follower):
                     self?.showFollowerDetail(of: follower)
+                case .dismiss:
+                    self?.pop()
+                    self?.didFinishSubject.send()
                 }
             }.store(in: &cancellables)
         push(module.viewController)

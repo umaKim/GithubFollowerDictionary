@@ -16,8 +16,12 @@ final class MainTabBarCoordinator: Coordinator {
     
     private let container: AppContainer
     
-    init(navigationController: UINavigationController,
-         container: AppContainer) {
+    private var cancellables = Set<AnyCancellable>()
+    
+    init(
+        navigationController: UINavigationController,
+        container: AppContainer
+    ) {
         self.navigationController  = navigationController
         self.container             = container
     }

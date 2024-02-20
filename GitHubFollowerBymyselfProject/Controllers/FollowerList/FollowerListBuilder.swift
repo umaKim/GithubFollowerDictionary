@@ -9,6 +9,7 @@ import UIKit
 
 enum FollowerlistTransition: Transition {
     case tap(_ follower: Follower)
+    case dismiss
 }
 
 final class FollowerListBuilder {

@@ -12,7 +12,7 @@ final class FollowerDetailViewController: BaseViewController<FollowerDetailViewM
     
     //MARK: - UI Object
     private let contentView = FollowerDetailView()
-
+    
     //MARK: - Load View
     override func loadView() {
         view = contentView
@@ -31,22 +31,44 @@ final class FollowerDetailViewController: BaseViewController<FollowerDetailViewM
 extension FollowerDetailViewController {
     private func bind() {
         func bindViewModelToView() {
-            viewModel.$followerDetailInfo
+            viewModel
+                .$followerDetailInfo
                 .compactMap({$0})
                 .sink {[unowned self] in
                     self.contentView.setItemViews(with: $0)
                 }
                 .store(in: &cancellables)
             
-            viewModel.$state
-                .sink(receiveValue: stateHandler)
+            viewModel
+                .$state
+                .sink(receiveValue: {[weak self] state in
+                    guard let self = self else { return }
+                    switch state {
+                    case .loading:
+                        contentView.startAnimation
+                        
+                    case .finishedLoading:
+                        contentView.endAnimation
+                        
+                    case .error(let error):
+                        viewModel.dismiss()
+                        showAlertPopUpOnMainThread(
+                            title: "Error",
+                            message: error.localizedDescription,
+                            buttonTitle: "Ok"
+                        )
+                    }
+                })
                 .store(in: &cancellables)
             
-            viewModel.successMessagePublisher
+            viewModel
+                .successMessagePublisher
                 .sink {[unowned self] message in
-                    self.showAlertPopUpOnMainThread(title: "Successfully added",
-                                                     message: message,
-                                                     buttonTitle: "Ok")
+                    self.showAlertPopUpOnMainThread(
+                        title: "Successfully added",
+                        message: message,
+                        buttonTitle: "Ok"
+                    )
                 }
                 .store(in: &cancellables)
         }
@@ -70,25 +92,6 @@ extension FollowerDetailViewController {
         
         bindViewModelToView()
         bindViewToViewModel()
-    }
-}
-
-//MARK: - Handler
-extension FollowerDetailViewController {
-    private func stateHandler(state: FollowListViewState) {
-        switch state {
-        case .loading:
-            contentView.startAnimation
-
-        case .finishedLoading:
-            contentView.endAnimation
-            
-        case .error(let error):
-            viewModel.dismiss()
-            showAlertPopUpOnMainThread(title: "Error",
-                                             message: error.localizedDescription,
-                                             buttonTitle: "Ok")
-        }
     }
 }
 

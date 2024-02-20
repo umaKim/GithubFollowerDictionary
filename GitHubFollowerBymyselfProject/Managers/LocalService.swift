@@ -11,6 +11,7 @@ import Foundation
 protocol LocalServiceProtocol {
     func save(followers: [Follower]) -> AnyPublisher<IGMessage, GFError>
     func read() -> [Follower]
+    @discardableResult
     func update(byAdding follower: Follower) -> AnyPublisher<IGMessage, GFError>
     func delete(follower: Follower) -> AnyPublisher<IGMessage, GFError>
 }
@@ -46,6 +47,7 @@ final class LocalService: LocalServiceProtocol {
         }
     }
     
+    @discardableResult
     func update(byAdding follower: Follower) -> AnyPublisher<IGMessage, GFError> {
         var retrievedFollowers = read()
         if retrievedFollowers.contains(follower) {

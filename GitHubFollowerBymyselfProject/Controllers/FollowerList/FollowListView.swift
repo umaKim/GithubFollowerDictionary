@@ -11,6 +11,7 @@ import UIKit
 enum FollowerListViewAction {
     case add
     case searchQuery(String)
+    case dismiss
 }
 
 final class FollowerListView: UIView {
@@ -20,6 +21,7 @@ final class FollowerListView: UIView {
     private(set) lazy var loadingView         = ActivityIndicatorView(style: .medium)
     
     private(set) lazy var addToFavoriteButton = UIBarButtonItem(title: "Add", menu: nil)
+    private(set) lazy var backButton = UIBarButtonItem(image: .init(systemName: "chevron.left"), menu: nil)
     
     private var collectionViewLayout: UICollectionViewLayout {
         let width                   = UIScreen.main.bounds.width
@@ -30,7 +32,6 @@ final class FollowerListView: UIView {
         let flowLayout              = UICollectionViewFlowLayout()
         flowLayout.sectionInset     = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         flowLayout.itemSize         = CGSize(width: itemWidth, height: itemWidth + 40)
-        
         return flowLayout
     }
     
@@ -66,6 +67,13 @@ final class FollowerListView: UIView {
             .tapPublisher
             .sink { [unowned self] _ in
                 self.actionSubject.send(.add)
+            }
+            .store(in: &cancellables)
+        
+        backButton
+            .tapPublisher
+            .sink { [unowned self] _ in
+                self.actionSubject.send(.dismiss)
             }
             .store(in: &cancellables)
     }

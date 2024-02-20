@@ -55,7 +55,9 @@ extension FollowerListViewController {
             
             viewModel.$state
                 .receive(on: RunLoop.main)
-                .sink(receiveValue: stateHandler)
+                .sink(receiveValue: { [weak self] in
+                    self?.stateHandler(state: $0)
+                })
                 .store(in: &cancellables)
             
             viewModel.errorMessagePublisher
@@ -74,6 +76,9 @@ extension FollowerListViewController {
                         viewModel.addToFavorite()
                     case .searchQuery(let query):
                         viewModel.fetchFollowers(of: query)
+                        
+                    case .dismiss:
+                        viewModel.dismiss()
                     }
                 }
                 .store(in: &cancellables)
@@ -88,6 +93,7 @@ extension FollowerListViewController {
 extension FollowerListViewController {
     private func configureNavigationBar() {
         navigationItem.rightBarButtonItem = contentView.addToFavoriteButton
+        navigationItem.leftBarButtonItem = contentView.backButton
     }
 }
 

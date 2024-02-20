@@ -30,7 +30,8 @@ final class FollowerDetailCoordinaotr: Coordinator{
     func start() {
         let module = FollowerDetailBuilder.build(follower: follower, container: container)
         module.transitionPublisher
-            .sink { transition in
+            .sink {[weak self] transition in
+                guard let self = self else { return }
                 switch transition {
                 case .dismiss:
                     self.dismiss()

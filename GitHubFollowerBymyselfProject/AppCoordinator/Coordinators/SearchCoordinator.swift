@@ -29,10 +29,10 @@ final class SearchCoordinator: Coordinator {
     func start() {
         let module = SearchBuilder.build()
         module.transitionPublisher
-            .sink { transition in
+            .sink {[weak self] transition in
                 switch transition {
                 case .search(query: let term):
-                    self.showFollowerList(of: term)
+                    self?.showFollowerList(of: term)
                 }
             }
             .store(in: &cancellable)
@@ -46,6 +46,13 @@ final class SearchCoordinator: Coordinator {
             userName: userName
         )
         addChild(coordinator: coordinator)
+        coordinator
+            .didFinishPublisher
+            .sink {[weak self] _ in
+                self?.childCoordinators.forEach({ self?.removeChild(coordinator: $0 )})
+                self?.didFinishSubject.send()
+        }
+        .store(in: &cancellable)
         coordinator.start()
     }
 }

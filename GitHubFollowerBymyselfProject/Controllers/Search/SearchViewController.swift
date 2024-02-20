@@ -31,8 +31,8 @@ extension SearchViewController {
         func bindViewModelToView() {
             viewModel
                 .$isValid
-                .sink(receiveValue: { [unowned self] in
-                    contentView.setGetFollowersButton($0)
+                .sink(receiveValue: { [weak self] in
+                    self?.contentView.setGetFollowersButton($0)
                 })
                 .store(in: &cancellables)
         }
@@ -40,7 +40,8 @@ extension SearchViewController {
         func bindViewToViewModel() {
             contentView
                 .actionPublisher
-                .sink {[unowned self] action in
+                .sink {[weak self] action in
+                    guard let self = self else {return}
                     switch action {
                     case .searchDidTap:
                         self.viewModel.searchButtonDidTap()

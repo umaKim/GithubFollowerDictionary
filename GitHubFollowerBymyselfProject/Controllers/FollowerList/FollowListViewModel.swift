@@ -15,7 +15,7 @@ enum FollowListViewState {
 }
 
 final class FollowerListViewModel: BaseViewModel {
-
+    
     //MARK: - Models
     private (set) var username: String
     @Published private(set) var followers: [Follower]           = []
@@ -61,11 +61,13 @@ extension FollowerListViewModel {
     func fetchFollowers(of userName: String) {
         guard userName != "" else { return }
         state = .loading
-        networkService.fetchFollowerList(of: userName)
-            .sink(
-                receiveCompletion: fetchCompletion,
-                receiveValue: receiveValue
-            )
+        networkService
+            .fetchFollowerList(of: userName)
+            .sink(receiveCompletion: { [weak self] in
+                self?.fetchCompletion(completion: $0)
+            }, receiveValue: { [weak self] in
+                self?.receiveValue(followers: $0)
+            })
             .store(in: &cancellables)
     }
     
@@ -85,25 +87,29 @@ extension FollowerListViewModel {
     
     func addToFavorite() {
         state = .loading
-
+        
         let fetchCompletionValue: (Subscribers.Completion<GFError>) -> Void = {[unowned self] completion in
             switch completion {
             case .finished:
                 self.state = .finishedLoading
-
+                
             case .failure(_):
                 self.state = .error(.error)
             }
         }
-
+        
         let returnValue: (FollowerDetailInformation) -> Void = {[weak self] followerInfo in
             let follower = Follower(login: followerInfo.login, avatar_url: followerInfo.avatarUrl)
             self?.favoriteManager.update(byAdding: follower)
         }
-
+        
         networkService.fetchFollowerDetail(of: username)
             .sink(receiveCompletion: fetchCompletionValue,
                   receiveValue: returnValue)
             .store(in: &cancellables)
+    }
+    
+    func dismiss() {
+        transitionSubject.send(.dismiss)
     }
 }
