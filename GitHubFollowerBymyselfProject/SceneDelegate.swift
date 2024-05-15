@@ -5,6 +5,7 @@
 //  Created by 김윤석 on 2021/06/23.
 //
 
+import DependencyManager
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
