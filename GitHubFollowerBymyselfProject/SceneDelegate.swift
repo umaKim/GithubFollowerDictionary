@@ -5,11 +5,13 @@
 //  Created by 김윤석 on 2021/06/23.
 //
 
+import DependencyManager
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
     
     var appContainer: AppContainerImplementation!
     var appCoordinator: AppCoordinator!
@@ -21,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene   = windowScene
         
         guard let window      = window else { return }
-        appContainer          = AppContainerImplementation()
+        let appContainer      = AppContainerImplementation()
         appCoordinator        = AppCoordinator(window: window, container: appContainer)
-        appCoordinator.start()
+        appCoordinator?.start()
     }
 }
